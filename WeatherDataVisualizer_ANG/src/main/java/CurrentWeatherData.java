@@ -1,4 +1,5 @@
 import java.time.LocalDateTime;
+import java.util.List;
 import java.util.Objects;
 
 public class CurrentWeatherData implements WeatherData {
@@ -6,6 +7,8 @@ public class CurrentWeatherData implements WeatherData {
     private int rainProbability;
     private WeatherCondition currentCondition;
     private LocalDateTime timestamp;
+
+    List
 
     public CurrentWeatherData(double temperature, int rainProbability, WeatherCondition currentCondition, LocalDateTime timestamp) {
         this.temperature = temperature;
@@ -40,6 +43,21 @@ public class CurrentWeatherData implements WeatherData {
     @Override
     public LocalDateTime getTimestamp() {
         return timestamp;
+    }
+
+    @Override
+    public void registerObserver(WeatherDataObserver observer) {
+
+    }
+
+    @Override
+    public void removeObserver(WeatherDataObserver observer) {
+
+    }
+
+    @Override
+    public void notifyObservers() {
+
     }
 
     // Equals und HashCode Methoden für korrekte Objektvergleiche

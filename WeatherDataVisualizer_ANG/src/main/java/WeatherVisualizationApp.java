@@ -18,7 +18,7 @@ public class WeatherVisualizationApp extends Application {
         primaryStage.setTitle("Wetter-Visualisierung");
         primaryStage.setScene(scene);
         primaryStage.show();
-    }
+    } //durch den Application Methode
 
     public static void main(String[] args) {
         launch(args);

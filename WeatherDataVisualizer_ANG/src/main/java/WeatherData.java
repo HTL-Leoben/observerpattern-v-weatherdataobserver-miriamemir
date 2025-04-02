@@ -24,4 +24,8 @@ public interface WeatherData {
      * @return Zeitpunkt der Wetteraufzeichnung
      */
     LocalDateTime getTimestamp();
+
+    void registerObserver(WeatherDataObserver observer);
+    void removeObserver(WeatherDataObserver observer);
+    void notifyObservers();
 }
